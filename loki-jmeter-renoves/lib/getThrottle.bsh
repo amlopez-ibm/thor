@@ -1,0 +1,2 @@
+a=getprop("throttle");
+print(a);

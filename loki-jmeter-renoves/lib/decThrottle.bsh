@@ -1,0 +1,11 @@
+printprop("throttle");
+curr = Integer.decode(args[0]);  // Start value
+decr  = Integer.decode(args[1]);  // Decrement
+end  = Integer.decode(args[2]);  // Final value
+secs = Integer.decode(args[3]);  // Wait between changes
+while(end <= curr) {
+  setprop("throttle",curr.toString()); // Needs to be a string here
+  Thread.sleep(secs*1000);
+  curr -= decr;
+}
+printprop("throttle");
